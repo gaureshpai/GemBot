@@ -1,4 +1,4 @@
-package JAVA;
+
 class Box{
     double width;
     double height;

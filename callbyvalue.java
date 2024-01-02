@@ -1,4 +1,3 @@
-package JAVA;
 
 class test{
     void math(int i,int j){

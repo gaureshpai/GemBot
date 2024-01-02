@@ -1,4 +1,4 @@
-package month;
+
 import java.util.Scanner;
 class month{
     public static void main(String args[]){

@@ -1,4 +1,3 @@
-package java;
 
 public class add2num {
 			public static void main(String args[])

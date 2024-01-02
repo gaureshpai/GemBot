@@ -1,4 +1,4 @@
-package JAVA;
+
 import java.util.Scanner;
 class large{
     public static void main(String args[]){
