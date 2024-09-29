@@ -1,66 +1,92 @@
-<a href="https://chat.vercel.ai/">
-  <img alt="Next.js 13 and app template Router-ready AI chatbot." src="https://chat.vercel.ai/opengraph-image.png">
-  <h1 align="center">Next.js AI Chatbot</h1>
-</a>
+# **Next.js AI Chatbot Template**
+
+An open-source AI chatbot template built with Next.js, Vercel AI SDK, OpenAI, and Vercel KV.
 
 <p align="center">
-  An open-source AI chatbot app template built with Next.js, the Vercel AI SDK, OpenAI, and Vercel KV.
+  <a href="https://chat.vercel.ai/">
+    <img alt="Next.js 13 and app template Router-ready AI chatbot." src="https://chat.vercel.ai/opengraph-image.png" />
+    <h1 align="center">Next.js AI Chatbot</h1>
+  </a>
 </p>
 
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#model-providers"><strong>Model Providers</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running locally</strong></a> ·
-  <a href="#authors"><strong>Authors</strong></a>
-</p>
-<br/>
+## **Overview**
+This repository provides a starting point for building AI-powered chatbots using Next.js with modern web technologies and powerful AI services. With built-in support for OpenAI, Anthropic, HuggingFace, or custom AI chat models, this template offers a flexible solution for creating intelligent and interactive chat applications.
 
-## Features
+### **Key Features**
+- **Next.js App Router**: Harness the power of React Server Components (RSCs) and Server Actions.
+- **Vercel AI SDK**: Streamlined integration with AI models for real-time chat interactions.
+- **AI Model Support**: Easily integrate OpenAI (default), Anthropic, HuggingFace, or your custom models.
+- **Tailwind CSS & Radix UI**: Beautiful, responsive design with [shadcn/ui](https://ui.shadcn.com).
+- **Authentication & Access Control**: [Clerk](https://clerk.com) integration for seamless user management.
+- **Edge Runtime Ready**: Optimized for performance at the edge with Vercel.
+- **Chat History & Session Storage**: Powered by [Vercel KV](https://vercel.com/storage/kv) for persistent conversations.
 
-- [Next.js](https://nextjs.org) App Router
-- React Server Components (RSCs), Suspense, and Server Actions
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) for streaming chat UI
-- Support for OpenAI (default), Anthropic, HuggingFace, or custom AI chat models and/or LangChain
-- Edge runtime-ready
-- [shadcn/ui](https://ui.shadcn.com)
-  - Styling with [Tailwind CSS](https://tailwindcss.com)
-  - [Radix UI](https://radix-ui.com) for headless component primitives
-  - Icons from [Phosphor Icons](https://phosphoricons.com)
-- Chat History, rate limiting, and session storage with [Vercel KV](https://vercel.com/storage/kv)
-- [Clerk](https://clerk.com) for authentication, user management and access control
+---
 
-## Model Providers
+## **Getting Started**
 
-This template ships with OpenAI `gpt-3.5-turbo` as the default. However, thanks to the [Vercel AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [Anthropic](https://anthropic.com), [HuggingFace](https://huggingface.co), or using [LangChain](https://js.langchain.com) with just a few lines of code.
+### **Running Locally**
 
-## Deploy Your Own
+To run the Next.js AI Chatbot on your local machine, follow these steps:
 
-You can deploy your own version of the Next.js AI Chatbot to Vercel with one click:
+1. **Install the Vercel CLI**:
+   ```bash
+   npm i -g vercel
+   ```
+   
+2. **Link your local instance with Vercel and GitHub**:
+   ```bash
+   vercel link
+   ```
+   - This will create a `.vercel` directory that connects your local environment to Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js+Chat&demo-description=A+full-featured%2C+hackable+Next.js+AI+chatbot+built+by+Vercel+Labs&demo-url=https%3A%2F%2Fchat.vercel.ai%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4aVPvWuTmBvzM5cEdRdqeW%2F4234f9baf160f68ffb385a43c3527645%2FCleanShot_2023-06-16_at_17.09.21.png&project-name=Next.js+Chat&repository-name=nextjs-chat&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot&from=templates&skippable-integrations=1&env=OPENAI_API_KEY%2CAUTH_GITHUB_ID%2CAUTH_GITHUB_SECRET&envDescription=How+to+get+these+env+vars&envLink=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-chatbot%2Fblob%2Fmain%2F.env.example&teamCreateStatus=hidden&stores=[{"type":"kv"}])
+3. **Pull the environment variables**:
+   ```bash
+   vercel env pull
+   ```
+   - This will download all necessary environment variables into your local environment.
 
-## Running locally
+4. **Install project dependencies**:
+   ```bash
+   pnpm install
+   ```
 
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js AI Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables) for this, but a `.env` file is all that is necessary.
+5. **Start the development server**:
+   ```bash
+   pnpm dev
+   ```
 
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various OpenAI and authentication provider accounts.
+Your app will be running locally on [http://localhost:3000](http://localhost:3000/).
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
+---
 
-```bash
-pnpm install
-pnpm dev
-```
+## **Environment Variables**
+To ensure the application works, you’ll need to set up environment variables. You can find the required variables in the [`.env.example`](./.env.example) file. It's recommended to use [Vercel Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables) for deployment.
 
-Your app template should now be running on [localhost:3000](http://localhost:3000/).
+---
 
-## Authors
+## **Technology Stack**
+- **Framework**: [Next.js](https://nextjs.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com), [Radix UI](https://radix-ui.com)
+- **AI SDK**: [Vercel AI SDK](https://sdk.vercel.ai/docs)
+- **Authentication**: [Clerk](https://clerk.com)
+- **State & Storage**: [Vercel KV](https://vercel.com/storage/kv)
+- **Icons**: [Phosphor Icons](https://phosphoricons.com)
 
-This library is created by [Vercel](https://vercel.com) and [Next.js](https://nextjs.org) team members, with contributions from:
+---
 
-- Jared Palmer ([@jaredpalmer](https://twitter.com/jaredpalmer)) - [Vercel](https://vercel.com)
-- Shu Ding ([@shuding\_](https://twitter.com/shuding_)) - [Vercel](https://vercel.com)
-- shadcn ([@shadcn](https://twitter.com/shadcn)) - [Contractor](https://shadcn.com)
+## **Contributing**
+This project is open-source and welcomes contributions. If you’d like to improve the chatbot or add new features, feel free to submit a pull request or open an issue.
+
+---
+
+## **Authors**
+This template is built by the [Vercel](https://vercel.com) and [Next.js](https://nextjs.org) teams, with contributions from:
+
+- Jared Palmer ([@jaredpalmer](https://twitter.com/jaredpalmer))
+- Shu Ding ([@shuding_](https://twitter.com/shuding_))
+- shadcn ([@shadcn](https://twitter.com/shadcn))
+- Gauresh ([@hseruag](https://twitter.com/hseruag))
+- Jnanesh ([@jtuluve](https://github.com/jtuluve))
+- Himanshu ([@HimanshuHegde](https://github.com/HimanshuHegde))
+- Milan ([@Milan-C-I](https://github.com/Milan-C-I))
