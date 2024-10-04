@@ -16,14 +16,18 @@ export const metadata: Metadata = {
     template: `%s - Next.js AI Chatbot`
   },
   description: 'An AI-powered chatbot template built with Next.js and Vercel.',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' }
-  ],
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png'
+  },
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' }
+  ],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1
   }
 }
 
@@ -36,17 +40,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body
-          className={cn(
-            'font-sans antialiased',
-            fontSans.variable,
-            fontMono.variable
-          )}
-        >
+        <body className={cn('font-sans antialiased', fontSans.variable, fontMono.variable)}>
           <Toaster />
           <Providers attribute="class" defaultTheme="system" enableSystem>
             <div className="flex flex-col min-h-screen">
-              {/* @ts-ignore */}
               <Header />
               <main className="flex flex-col flex-1 bg-muted/50">
                 {children}
