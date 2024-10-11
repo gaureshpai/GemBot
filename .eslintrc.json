@@ -1,25 +1,7 @@
 {
-  "$schema": "https://json.schemastore.org/eslintrc",
-  "root": true,
-  "extends": [
-    "next/core-web-vitals",
-    "prettier",
-    "plugin:tailwindcss/recommended"
-  ],
-  "plugins": ["tailwindcss"],
+  "extends": "next",
   "rules": {
-    "tailwindcss/no-custom-classname": "off"
-  },
-  "settings": {
-    "tailwindcss": {
-      "callees": ["cn", "cva"],
-      "config": "tailwind.config.js"
-    }
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parser": "@typescript-eslint/parser"
-    }
-  ]
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
+  }
 }
