@@ -40,7 +40,7 @@ export async function POST(req: Request) {
     } else {
       try {
         const response = await ollama.chat.completions.create({
-          model: selectedModel || "gemma:2b",
+          model: selectedModel || "REST API",
           stream: true,
           messages,
         });
